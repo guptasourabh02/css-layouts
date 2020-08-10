@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Layout 12</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  #outer-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  #outer-grid > div {
+    background-color: #59405c;
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+  }
+  #inner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  #inner-grid > div {
+    background: #8675a9;;
+    padding: 10px;
+  }
+  </style>
+</head>  
+
+<body>
+  <div id="outer-grid">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div id="inner-grid">
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </div>
+</body>
+
+</html>  

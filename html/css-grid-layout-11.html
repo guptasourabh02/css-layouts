@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Layout 11</title>
+  <style>
+  #grid {
+    display: grid;
+    grid-template-rows: 50vh repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  #grid > div {
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+    background: #59405c;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px #bbb;
+    text-align: center;
+  }
+  #grid > div:nth-child(1) {
+    grid-column: span 4;
+    }
+  #grid > div:nth-child(2) {
+    grid-row: span 4;
+    }
+  #grid > div:nth-child(4) {
+    grid-row: span 2;
+    }
+  #grid > div:nth-child(5) {
+    grid-row: span 3;
+    }
+  #grid > div:nth-child(6) {
+    grid-row: span 3;
+    }
+  </style>
+</head>  
+<body id="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+</body>
+
+</html>

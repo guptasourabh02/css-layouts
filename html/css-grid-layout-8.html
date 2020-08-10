@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Layout 8</title>
+  <style>
+  body { 
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "ads article"
+      "nav article"
+      "nav footer";
+    grid-template-rows: 80px 150px 1fr 70px;  
+    grid-template-columns: 20% 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    padding:20px;
+    font-family: sans-serif;
+  }  
+  header, footer, article, nav, div {
+    padding: 1.2em;
+    background: #59405c;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px #bbb;
+    text-align: center;
+    color: #fff;
+  }
+  #header {
+    grid-area: header;
+  }
+  #footer {
+    grid-area: footer;
+  }
+  #main-content { 
+    grid-area: article;      
+  }
+  #nav { 
+    grid-area: nav; 
+  }
+  #site-ads { 
+    grid-area: ads; 
+  } 
+  /* Stack the layout on small devices/viewports. */
+  @media all and (max-width: 600px) {
+    body { 
+      grid-template-areas: 
+        "header"
+        "article"
+        "ads"
+        "nav"
+        "footer";
+      grid-template-rows: 80px 1fr 70px 100px 70px;  
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+</head>  
+<body>
+  <header id="header">Header Section</header>
+  <article id="main-content">Main Content Section</article>
+  <nav id="nav">Navigation Section</nav>
+  <div id="site-ads">Ads Section</div>
+  <footer id="footer">Footer Section</footer>
+</body>
+
+</html>

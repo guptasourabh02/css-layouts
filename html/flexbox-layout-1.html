@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox Layout 1</title>
+  <style>
+	  * {
+	    box-sizing: border-box; 
+	  }
+	  body {
+	    display: flex;
+	    min-height: 100vh;
+	    flex-direction: column;
+	    margin: 0;
+	    padding: 20px;
+	  }
+	  #main-container {
+	    display: flex;
+	    flex: 1;
+	  }
+	  #main-container > article {
+	    flex: 1;
+	    order: 1;
+	  }
+	  #main-container > nav, 
+	  #main-container > aside {
+	    flex: 0 0 20vw;
+	  }
+	  #main-container > nav {
+	    order: 3;
+	  }
+	  #main-container > aside {
+	    order: 2;
+	  }
+	  header, footer, article, nav, aside {
+	    padding: 1em;
+	    background: #59405c;
+	    border: 2px solid #fff;
+	    font-family: sans-serif;
+      color: #fff;
+      text-align: center;
+	  }
+		/* Stack the layout on small devices/viewports. */
+	  @media all and (max-width: 600px) {
+	    #main-container { 
+	      flex-direction: column;
+	    }
+	  }
+	</style>
+</head>
+
+<body>
+  <header>Header Section</header>
+  <div id="main-container">
+    <article>Article Section</article>
+    <nav>Navigation Section</nav>
+    <aside>Aside Section</aside>
+  </div>
+  <footer>Footer Section</footer>
+</body>
+
+</html>
